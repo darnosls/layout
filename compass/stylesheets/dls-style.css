@@ -1,0 +1,173 @@
+@charset "UTF-8";
+/*definindo a cor de fundo das laetrais e topo das páginas*/
+/*--------------------------------------------------------*/
+/* line 4, ../sass/dls-style.scss */
+html, body {
+  height: 100%;
+  margin: 0px;
+  font-family: helvetica, sans-serif;
+}
+
+/* line 9, ../sass/dls-style.scss */
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+  min-height: 100%;
+}
+
+/* line 15, ../sass/dls-style.scss */
+.container > * {
+  flex: 1 100%;
+}
+
+/* line 19, ../sass/dls-style.scss */
+.main p {
+  text-align: justify;
+  padding: 2%;
+}
+
+/* line 24, ../sass/dls-style.scss */
+.aside-1 {
+  background: steelblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* line 33, ../sass/dls-style.scss */
+.interna {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* line 39, ../sass/dls-style.scss */
+.aside-2 {
+  background: steelblue;
+  display: flex;
+  flex-direction: column;
+}
+
+@media all and (min-width: 600px) {
+  /* line 47, ../sass/dls-style.scss */
+  .aside {
+    flex: 1 auto;
+  }
+}
+@media all and (min-width: 800px) {
+  /* line 52, ../sass/dls-style.scss */
+  .main {
+    flex: 5 0px;
+  }
+
+  /* line 53, ../sass/dls-style.scss */
+  .aside-1 {
+    order: 1;
+    flex: 1 0px;
+  }
+
+  /* line 54, ../sass/dls-style.scss */
+  .main {
+    order: 2;
+  }
+
+  /* line 55, ../sass/dls-style.scss */
+  .aside-2 {
+    order: 3;
+    flex: 1 0px;
+  }
+}
+@media all and (min-width: 800px) {
+  /* line 59, ../sass/dls-style.scss */
+  .navigation {
+    padding-top: 2em;
+    font-size: 20px;
+  }
+}
+/* line 62, ../sass/dls-style.scss */
+.navigation {
+  list-style: none;
+  display: -webkit-flex;
+  -webkit-flex-direction: column-reverse;
+  display: flex;
+  flex-direction: column;
+}
+
+/* line 70, ../sass/dls-style.scss */
+.navigation-right {
+  list-style: none;
+  display: -webkit-flex;
+  -webkit-flex-direction: column-reverse;
+  display: flex;
+  flex-direction: column;
+}
+
+/* line 80, ../sass/dls-style.scss */
+.navigation a {
+  font-family: sans-serif;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  color: #000000;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+/* line 91, ../sass/dls-style.scss */
+.navigation a:hover {
+  background: #3f75a2;
+}
+
+/* line 97, ../sass/dls-style.scss */
+.name-logo {
+  background: steelblue;
+  display: block;
+  height: 20%;
+  align-items: center;
+}
+/* line 103, ../sass/dls-style.scss */
+.name-logo img {
+  height: 120px;
+}
+/* line 107, ../sass/dls-style.scss */
+.name-logo .img-photo img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+
+/* line 114, ../sass/dls-style.scss */
+.img-photo img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+
+/* line 119, ../sass/dls-style.scss */
+.aside-2-iten {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* line 127, ../sass/dls-style.scss */
+.aside-1-iten {
+  width: 100%;
+}
+
+/*controlando as divs laterais quando a tela do dispositivo for maior que 800px*/
+@media all and (min-width: 800px) {
+  /* line 134, ../sass/dls-style.scss */
+  .aside-1-iten {
+    width: 100%;
+    height: 33.33%;
+  }
+
+  /* line 137, ../sass/dls-style.scss */
+  .aside-2-iten {
+    width: 100%;
+    height: 33.33%;
+  }
+}
