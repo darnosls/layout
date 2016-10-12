@@ -1,0 +1,141 @@
+/*definindo a cor de fundo das laetrais e topo das páginas*/
+$color_back: steelblue;
+/*--------------------------------------------------------*/
+html, body{
+	height: 100%;
+	margin: 0px;
+	font-family: helvetica, sans-serif;
+}
+.container{
+	display: flex;
+	flex-flow: row wrap;
+	text-align: center;
+	min-height: 100%;
+}
+.container > *{
+	flex: 1 100%;
+}
+
+.main p{
+	text-align: justify;
+	padding: 2%;
+}
+
+.aside-1{
+	background: $color_back;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+}
+
+
+.interna{
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+
+.aside-2{
+	background: $color_back;
+	display: flex;
+	flex-direction: column;
+}
+
+
+@media all and (min-width: 600px){
+	.aside{flex: 1 auto; }
+
+}
+
+@media all and (min-width: 800px){
+	.main    { flex: 5 0px; }
+  	.aside-1 { order: 1; flex: 1 0px; } 
+  	.main    { order: 2; }
+  	.aside-2 { order: 3; flex: 1 0px;}
+}
+
+@media all and(min-width: 800px){
+	.navigation {padding-top: 2em; font-size: 20px; }
+}
+
+.navigation {
+	list-style: none;
+	display: -webkit-flex;
+	-webkit-flex-direction: column-reverse;
+	display: flex;
+	flex-direction: column;	
+}
+
+.navigation-right{
+	list-style: none;
+	display: -webkit-flex;
+	-webkit-flex-direction: column-reverse;
+	display: flex;
+	flex-direction: column;	
+}
+
+.navigation { 
+	
+	a {
+		font-family: sans-serif;
+		text-align: center;
+		text-decoration: none;
+		display: block;
+		padding: 1em;
+		color: #000000;
+		border-top: 1px solid rgba(255,255,255,0.3);
+		border-bottom: 1px solid rgba(0,0,0,0.1);
+	}
+
+	a:hover {
+		background: darken(steelblue, 5%);	
+	}
+}
+
+
+.name-logo{
+	background: $color_back;
+	display: block;
+	height: 20%;
+	align-items: center;
+
+	img{
+	   height: 120px;
+    }
+
+    .img-photo img{ 
+		border-radius: 50%;
+		width: 150px; height: 150px;
+	}
+
+}
+
+.img-photo img{ 
+	border-radius: 50%;
+	width: 150px; height: 150px;
+}
+
+.aside-2-iten{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+
+}
+
+.aside-1-iten{
+	width: 100%;
+}
+
+/*controlando as divs laterais quando a tela do dispositivo for maior que 800px*/
+@media all and(min-width: 800px){
+	.aside-1-iten{
+		width: 100%; height: 33.33%;
+	}
+	.aside-2-iten{
+		width: 100%; height: 33.33%;
+	}
+
+}
+
