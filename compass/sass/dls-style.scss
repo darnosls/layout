@@ -8,11 +8,17 @@ html, body{
 }
 .container{
 	display: flex;
+	width: 100%;
 	flex-flow: row wrap;
 	text-align: center;
 	min-height: 100%;
+	background: lightgrey;
+	box-sizing: border-box;
+
+
+
 }
-.container > *{
+.container > * {
 	flex: 1 100%;
 }
 
@@ -20,12 +26,15 @@ html, body{
 	text-align: justify;
 	padding: 2%;
 }
-
+.main {
+	position: relative;
+	background-color: white;
+}
 .aside-1{
 	background: $color_back;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	/*align-items: center;*/
 	
 }
 
@@ -50,13 +59,15 @@ html, body{
 
 @media all and (min-width: 800px){
 	.main    { flex: 5 0px; }
-  	.aside-1 { order: 1; flex: 1 0px; } 
+  	.aside-1 { order: 1; flex: 1.5 0px; } 
   	.main    { order: 2; }
-  	.aside-2 { order: 3; flex: 1 0px;}
+  	.aside-2 { order: 3; flex: 1.5 0px;}
 }
 
 @media all and(min-width: 800px){
-	.navigation {padding-top: 2em; font-size: 20px; }
+	.navigation, .navigation-right {padding-top: 2em; font-size: 20px; }
+	.name-logo, .component-1-left, .component-1-right{min-height: 200px;}
+	.component-3-right, .component-3-left, .component-2-right, .component-2-left{height: 400px;}
 }
 
 .navigation {
@@ -64,10 +75,12 @@ html, body{
 	display: -webkit-flex;
 	-webkit-flex-direction: column-reverse;
 	display: flex;
-	flex-direction: column;	
+	flex-direction: column;
 }
 
 .navigation-right{
+	font-size: medium;
+	font-stretch: extra-expanded;
 	list-style: none;
 	display: -webkit-flex;
 	-webkit-flex-direction: column-reverse;
@@ -96,27 +109,22 @@ html, body{
 
 .name-logo{
 	background: $color_back;
-	display: block;
-	height: 20%;
-	align-items: center;
 
 	img{
-	   height: 120px;
+	   width: 250px;
+	   
     }
-
     .img-photo img{ 
+    	margin-top: 15px;
 		border-radius: 50%;
-		width: 150px; height: 150px;
+		width: 100px; height: 100px;
 	}
 
 }
 
-.img-photo img{ 
-	border-radius: 50%;
-	width: 150px; height: 150px;
-}
 
-.aside-2-iten{
+
+.aside-2{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -124,17 +132,18 @@ html, body{
 
 }
 
-.aside-1-iten{
-	width: 100%;
+.aside{
+	width: 100px;
+	min-height: 500px;
 }
 
 /*controlando as divs laterais quando a tela do dispositivo for maior que 800px*/
 @media all and(min-width: 800px){
-	.aside-1-iten{
-		width: 100%; height: 33.33%;
+	.aside-2 > *{
+		width: 100%;
 	}
-	.aside-2-iten{
-		width: 100%; height: 33.33%;
+	.aside-2{
+		/*width: 100%; height: 33.33%;*/
 	}
 
 }
