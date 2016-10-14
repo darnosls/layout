@@ -8,6 +8,7 @@ html, body{
 }
 .container{
 	display: flex;
+<<<<<<< HEAD
 	width: 100%;
 	flex-flow: row wrap;
 	text-align: center;
@@ -19,6 +20,13 @@ html, body{
 
 }
 .container > * {
+=======
+	flex-flow: row wrap;
+	text-align: center;
+	min-height: 100%;
+}
+.container > *{
+>>>>>>> d10ca7bea51c84d24b266a11527450fe94a2997a
 	flex: 1 100%;
 }
 
@@ -26,15 +34,23 @@ html, body{
 	text-align: justify;
 	padding: 2%;
 }
+<<<<<<< HEAD
 .main {
 	position: relative;
 	background-color: white;
 }
+=======
+
+>>>>>>> d10ca7bea51c84d24b266a11527450fe94a2997a
 .aside-1{
 	background: $color_back;
 	display: flex;
 	flex-direction: column;
+<<<<<<< HEAD
 	/*align-items: center;*/
+=======
+	align-items: center;
+>>>>>>> d10ca7bea51c84d24b266a11527450fe94a2997a
 	
 }
 
@@ -59,6 +75,7 @@ html, body{
 
 @media all and (min-width: 800px){
 	.main    { flex: 5 0px; }
+<<<<<<< HEAD
   	.aside-1 { order: 1; flex: 1.5 0px; } 
   	.main    { order: 2; }
   	.aside-2 { order: 3; flex: 1.5 0px;}
@@ -68,6 +85,15 @@ html, body{
 	.navigation, .navigation-right {padding-top: 2em; font-size: 20px; }
 	.name-logo, .component-1-left, .component-1-right{min-height: 200px;}
 	.component-3-right, .component-3-left, .component-2-right, .component-2-left{height: 400px;}
+=======
+  	.aside-1 { order: 1; flex: 1 0px; } 
+  	.main    { order: 2; }
+  	.aside-2 { order: 3; flex: 1 0px;}
+}
+
+@media all and(min-width: 800px){
+	.navigation {padding-top: 2em; font-size: 20px; }
+>>>>>>> d10ca7bea51c84d24b266a11527450fe94a2997a
 }
 
 .navigation {
@@ -75,12 +101,19 @@ html, body{
 	display: -webkit-flex;
 	-webkit-flex-direction: column-reverse;
 	display: flex;
+<<<<<<< HEAD
 	flex-direction: column;
 }
 
 .navigation-right{
 	font-size: medium;
 	font-stretch: extra-expanded;
+=======
+	flex-direction: column;	
+}
+
+.navigation-right{
+>>>>>>> d10ca7bea51c84d24b266a11527450fe94a2997a
 	list-style: none;
 	display: -webkit-flex;
 	-webkit-flex-direction: column-reverse;
@@ -109,6 +142,7 @@ html, body{
 
 .name-logo{
 	background: $color_back;
+<<<<<<< HEAD
 
 	img{
 	   width: 250px;
@@ -118,13 +152,35 @@ html, body{
     	margin-top: 15px;
 		border-radius: 50%;
 		width: 100px; height: 100px;
+=======
+	display: block;
+	height: 20%;
+	align-items: center;
+
+	img{
+	   height: 120px;
+    }
+
+    .img-photo img{ 
+		border-radius: 50%;
+		width: 150px; height: 150px;
+>>>>>>> d10ca7bea51c84d24b266a11527450fe94a2997a
 	}
 
 }
 
+<<<<<<< HEAD
 
 
 .aside-2{
+=======
+.img-photo img{ 
+	border-radius: 50%;
+	width: 150px; height: 150px;
+}
+
+.aside-2-iten{
+>>>>>>> d10ca7bea51c84d24b266a11527450fe94a2997a
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -132,18 +188,31 @@ html, body{
 
 }
 
+<<<<<<< HEAD
 .aside{
 	width: 100px;
 	min-height: 500px;
+=======
+.aside-1-iten{
+	width: 100%;
+>>>>>>> d10ca7bea51c84d24b266a11527450fe94a2997a
 }
 
 /*controlando as divs laterais quando a tela do dispositivo for maior que 800px*/
 @media all and(min-width: 800px){
+<<<<<<< HEAD
 	.aside-2 > *{
 		width: 100%;
 	}
 	.aside-2{
 		/*width: 100%; height: 33.33%;*/
+=======
+	.aside-1-iten{
+		width: 100%; height: 33.33%;
+	}
+	.aside-2-iten{
+		width: 100%; height: 33.33%;
+>>>>>>> d10ca7bea51c84d24b266a11527450fe94a2997a
 	}
 
 }
