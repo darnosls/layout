@@ -1,55 +1,184 @@
-/*
-Error: Invalid CSS after "	width: 100%": expected "{", was ";"
-        on line 12 of /home/darnos/www/layout/compass/sass/dls-style.scss
+@charset "UTF-8";
+/*definindo a cor de fundo das laetrais e topo das páginas*/
+/*--------------------------------------------------------*/
+/* line 4, ../sass/dls-style.scss */
+html, body {
+  height: 100%;
+  margin: 0px;
+  font-family: helvetica, sans-serif;
+}
 
-7: 	font-family: helvetica, sans-serif;
-8: }
-9: .container{
-10: 	display: flex;
-11: <<<<<<< HEAD
-12: 	width: 100%;
-13: 	flex-flow: row wrap;
-14: 	text-align: center;
-15: 	min-height: 100%;
-16: 	background: lightgrey;
-17: 	box-sizing: border-box;
+/* line 9, ../sass/dls-style.scss */
+.container {
+  display: flex;
+  width: 100%;
+  flex-flow: row wrap;
+  text-align: center;
+  min-height: 100%;
+  background: lightgrey;
+  box-sizing: border-box;
+}
 
-Backtrace:
-/home/darnos/www/layout/compass/sass/dls-style.scss:12
-/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:1179:in `expected'
-/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:1115:in `expected'
-/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:1110:in `tok!'
-/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:654:in `block'
-/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:724:in `declaration_or_ruleset'
-/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:674:in `block_child'
-/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:666:in `block_contents'
-/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:655:in `block'
-/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:647:in `ruleset'
-/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:673:in `block_child'
-/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:666:in `block_contents'
-/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:123:in `stylesheet'
-/usr/lib/ruby/vendor_ruby/sass/scss/parser.rb:39:in `parse'
-/usr/lib/ruby/vendor_ruby/sass/engine.rb:403:in `_to_tree'
-/usr/lib/ruby/vendor_ruby/sass/engine.rb:278:in `render'
-/usr/lib/ruby/vendor_ruby/compass/import-once/engine.rb:17:in `block in render'
-/usr/lib/ruby/vendor_ruby/compass/import-once/engine.rb:29:in `with_import_scope'
-/usr/lib/ruby/vendor_ruby/compass/import-once/engine.rb:16:in `render'
-/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:492:in `update_stylesheet'
-/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:209:in `each'
-/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:471:in `on_file_changed'
-/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:328:in `block in watch'
-/usr/lib/ruby/vendor_ruby/listen/event/config.rb:23:in `call'
-/usr/lib/ruby/vendor_ruby/listen/event/processor.rb:115:in `_process_changes'
-/usr/lib/ruby/vendor_ruby/listen/event/processor.rb:19:in `block in loop_for'
-/usr/lib/ruby/vendor_ruby/listen/event/processor.rb:15:in `loop'
-/usr/lib/ruby/vendor_ruby/listen/event/processor.rb:15:in `loop_for'
-/usr/lib/ruby/vendor_ruby/listen/event/loop.rb:84:in `_wait_for_changes'
-/usr/lib/ruby/vendor_ruby/listen/event/loop.rb:42:in `block in setup'
-/usr/lib/ruby/vendor_ruby/listen/internals/thread_pool.rb:6:in `block in add'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"	width: 100%\": expected \"{\", was \";\"\A         on line 12 of /home/darnos/www/layout/compass/sass/dls-style.scss\A \A 7: 	font-family: helvetica, sans-serif;\A 8: }\A 9: .container{\A 10: 	display: flex;\A 11: <<<<<<< HEAD\A 12: 	width: 100%;\A 13: 	flex-flow: row wrap;\A 14: 	text-align: center;\A 15: 	min-height: 100%;\A 16: 	background: lightgrey;\A 17: 	box-sizing: border-box;"; }
+/* line 21, ../sass/dls-style.scss */
+.container > * {
+  flex: 1 100%;
+}
+
+/* line 25, ../sass/dls-style.scss */
+.main p {
+  text-align: justify;
+  padding: 2%;
+}
+
+/* line 29, ../sass/dls-style.scss */
+.main {
+  position: relative;
+  background-color: white;
+}
+
+/* line 33, ../sass/dls-style.scss */
+.aside-1 {
+  background: steelblue;
+  display: flex;
+  flex-direction: column;
+  /*align-items: center;*/
+}
+
+/* line 42, ../sass/dls-style.scss */
+.interna {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* line 48, ../sass/dls-style.scss */
+.aside-2 {
+  background: steelblue;
+  display: flex;
+  flex-direction: column;
+}
+
+@media all and (min-width: 600px) {
+  /* line 56, ../sass/dls-style.scss */
+  .aside {
+    flex: 1 auto;
+  }
+}
+@media all and (min-width: 800px) {
+  /* line 61, ../sass/dls-style.scss */
+  .main {
+    flex: 5 0px;
+  }
+
+  /* line 62, ../sass/dls-style.scss */
+  .aside-1 {
+    order: 1;
+    flex: 1.5 0px;
+  }
+
+  /* line 63, ../sass/dls-style.scss */
+  .main {
+    order: 2;
+  }
+
+  /* line 64, ../sass/dls-style.scss */
+  .aside-2 {
+    order: 3;
+    flex: 1.5 0px;
+  }
+}
+@media all and (min-width: 800px) {
+  /* line 68, ../sass/dls-style.scss */
+  .navigation, .navigation-right {
+    padding-top: 2em;
+    font-size: 20px;
+  }
+
+  /* line 69, ../sass/dls-style.scss */
+  .name-logo, .component-1-left, .component-1-right {
+    min-height: 200px;
+  }
+
+  /* line 70, ../sass/dls-style.scss */
+  .component-3-right, .component-3-left, .component-2-right, .component-2-left {
+    height: 400px;
+  }
+}
+/* line 73, ../sass/dls-style.scss */
+.navigation {
+  list-style: none;
+  display: -webkit-flex;
+  -webkit-flex-direction: column-reverse;
+  display: flex;
+  flex-direction: column;
+}
+
+/* line 81, ../sass/dls-style.scss */
+.navigation-right {
+  font-size: medium;
+  font-stretch: extra-expanded;
+  list-style: none;
+  display: -webkit-flex;
+  -webkit-flex-direction: column-reverse;
+  display: flex;
+  flex-direction: column;
+}
+
+/* line 93, ../sass/dls-style.scss */
+.navigation a {
+  font-family: sans-serif;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  color: #000000;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+/* line 104, ../sass/dls-style.scss */
+.navigation a:hover {
+  background: #3f75a2;
+}
+
+/* line 110, ../sass/dls-style.scss */
+.name-logo {
+  background: steelblue;
+}
+/* line 113, ../sass/dls-style.scss */
+.name-logo img {
+  width: 250px;
+}
+/* line 117, ../sass/dls-style.scss */
+.name-logo .img-photo img {
+  margin-top: 15px;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+/* line 127, ../sass/dls-style.scss */
+.aside-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* line 135, ../sass/dls-style.scss */
+.aside {
+  width: 100px;
+  min-height: 500px;
+}
+
+/*controlando as divs laterais quando a tela do dispositivo for maior que 800px*/
+@media all and (min-width: 800px) {
+  /* line 142, ../sass/dls-style.scss */
+  .aside-2 > * {
+    width: 100%;
+  }
+
+  /* line 145, ../sass/dls-style.scss */
+  .aside-2 {
+    /*width: 100%; height: 33.33%;*/
+  }
+}
