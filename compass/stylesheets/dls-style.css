@@ -8,7 +8,7 @@ html, body {
   font-family: helvetica, sans-serif;
 }
 
-/* line 9, ../sass/dls-style.scss */
+/* line 10, ../sass/dls-style.scss */
 .container {
   display: flex;
   width: 100%;
@@ -19,39 +19,38 @@ html, body {
   box-sizing: border-box;
 }
 
-/* line 21, ../sass/dls-style.scss */
+/* line 19, ../sass/dls-style.scss */
 .container > * {
   flex: 1 100%;
 }
 
-/* line 25, ../sass/dls-style.scss */
-.main p {
+/* line 23, ../sass/dls-style.scss */
+.prev-article {
   text-align: justify;
-  padding: 2%;
+  padding: 10%;
 }
 
-/* line 29, ../sass/dls-style.scss */
+/* line 27, ../sass/dls-style.scss */
 .main {
   position: relative;
   background-color: white;
 }
 
-/* line 33, ../sass/dls-style.scss */
+/* line 31, ../sass/dls-style.scss */
 .aside-1 {
   background: steelblue;
   display: flex;
   flex-direction: column;
-  /*align-items: center;*/
 }
 
-/* line 42, ../sass/dls-style.scss */
+/* line 38, ../sass/dls-style.scss */
 .interna {
   display: flex;
   flex-direction: column;
   position: relative;
 }
 
-/* line 48, ../sass/dls-style.scss */
+/* line 44, ../sass/dls-style.scss */
 .aside-2 {
   background: steelblue;
   display: flex;
@@ -59,52 +58,52 @@ html, body {
 }
 
 @media all and (min-width: 600px) {
-  /* line 56, ../sass/dls-style.scss */
+  /* line 52, ../sass/dls-style.scss */
   .aside {
     flex: 1 auto;
   }
 }
 @media all and (min-width: 800px) {
-  /* line 61, ../sass/dls-style.scss */
+  /* line 57, ../sass/dls-style.scss */
   .main {
     flex: 5 0px;
   }
 
-  /* line 62, ../sass/dls-style.scss */
+  /* line 58, ../sass/dls-style.scss */
   .aside-1 {
     order: 1;
     flex: 1.5 0px;
   }
 
-  /* line 63, ../sass/dls-style.scss */
+  /* line 59, ../sass/dls-style.scss */
   .main {
     order: 2;
   }
 
-  /* line 64, ../sass/dls-style.scss */
+  /* line 60, ../sass/dls-style.scss */
   .aside-2 {
     order: 3;
     flex: 1.5 0px;
   }
 }
 @media all and (min-width: 800px) {
-  /* line 68, ../sass/dls-style.scss */
+  /* line 64, ../sass/dls-style.scss */
   .navigation, .navigation-right {
     padding-top: 2em;
     font-size: 20px;
   }
 
-  /* line 69, ../sass/dls-style.scss */
+  /* line 65, ../sass/dls-style.scss */
   .name-logo, .component-1-left, .component-1-right {
     min-height: 200px;
   }
 
-  /* line 70, ../sass/dls-style.scss */
+  /* line 66, ../sass/dls-style.scss */
   .component-3-right, .component-3-left, .component-2-right, .component-2-left {
     height: 400px;
   }
 }
-/* line 73, ../sass/dls-style.scss */
+/* line 69, ../sass/dls-style.scss */
 .navigation {
   list-style: none;
   display: -webkit-flex;
@@ -113,7 +112,7 @@ html, body {
   flex-direction: column;
 }
 
-/* line 81, ../sass/dls-style.scss */
+/* line 77, ../sass/dls-style.scss */
 .navigation-right {
   font-size: medium;
   font-stretch: extra-expanded;
@@ -124,7 +123,7 @@ html, body {
   flex-direction: column;
 }
 
-/* line 93, ../sass/dls-style.scss */
+/* line 89, ../sass/dls-style.scss */
 .navigation a {
   font-family: sans-serif;
   text-align: center;
@@ -135,20 +134,20 @@ html, body {
   border-top: 1px solid rgba(255, 255, 255, 0.3);
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
-/* line 104, ../sass/dls-style.scss */
+/* line 100, ../sass/dls-style.scss */
 .navigation a:hover {
   background: #3f75a2;
 }
 
-/* line 110, ../sass/dls-style.scss */
+/* line 106, ../sass/dls-style.scss */
 .name-logo {
   background: steelblue;
 }
-/* line 113, ../sass/dls-style.scss */
+/* line 109, ../sass/dls-style.scss */
 .name-logo img {
   width: 250px;
 }
-/* line 117, ../sass/dls-style.scss */
+/* line 113, ../sass/dls-style.scss */
 .name-logo .img-photo img {
   margin-top: 15px;
   border-radius: 50%;
@@ -156,7 +155,7 @@ html, body {
   height: 100px;
 }
 
-/* line 127, ../sass/dls-style.scss */
+/* line 122, ../sass/dls-style.scss */
 .aside-2 {
   display: flex;
   flex-direction: column;
@@ -164,7 +163,7 @@ html, body {
   width: 100%;
 }
 
-/* line 135, ../sass/dls-style.scss */
+/* line 130, ../sass/dls-style.scss */
 .aside {
   width: 100px;
   min-height: 500px;
@@ -172,13 +171,90 @@ html, body {
 
 /*controlando as divs laterais quando a tela do dispositivo for maior que 800px*/
 @media all and (min-width: 800px) {
-  /* line 142, ../sass/dls-style.scss */
+  /* line 137, ../sass/dls-style.scss */
   .aside-2 > * {
     width: 100%;
   }
 
-  /* line 145, ../sass/dls-style.scss */
+  /* line 140, ../sass/dls-style.scss */
   .aside-2 {
     /*width: 100%; height: 33.33%;*/
   }
+}
+/*Ajustando a pagina de portfólio para que as divs sejam multilinhas*/
+/* line 147, ../sass/dls-style.scss */
+.main-projects {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+/* line 156, ../sass/dls-style.scss */
+.main-projects > * {
+  font: .9em Verdana, Arial, Helvetica, sans-serif;
+  color: white;
+  width: 230px;
+  height: 230px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e0e0e0;
+  margin: 2em .5em .5em .5em;
+  border-radius: 3%;
+}
+
+/*
+Estilo do form
+*/
+/* line 172, ../sass/dls-style.scss */
+.reg-form {
+  display: flex;
+  justify-content: center;
+}
+/* line 176, ../sass/dls-style.scss */
+.reg-form fieldset {
+  display: flex;
+  max-width: 500px;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px;
+  border: 1px solid #ccc;
+  border-radius: 1em;
+}
+/* line 187, ../sass/dls-style.scss */
+.reg-form legend {
+  color: #333;
+  padding: 0 10px;
+  margin: 0;
+  font-size: 1.5em;
+  font-weight: 400;
+}
+/* line 196, ../sass/dls-style.scss */
+.reg-form button {
+  width: 250px;
+  margin: 10px 0 0 0;
+}
+/* line 204, ../sass/dls-style.scss */
+.reg-form input, .reg-form textarea {
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin: 10px 0 0 0;
+  width: 250px;
+}
+/* line 211, ../sass/dls-style.scss */
+.reg-form input:focus,
+.reg-form textarea:focus {
+  background: #ffc;
+}
+/* line 215, ../sass/dls-style.scss */
+.reg-form textarea {
+  font: .9em Verdana, Arial, Helvetica, sans-serif;
+}
+/* line 219, ../sass/dls-style.scss */
+.reg-form label {
+  display: block;
+  margin: 12px 0 0;
+  font-weight: 700;
+  font-size: .9em;
 }

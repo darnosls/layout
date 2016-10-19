@@ -6,6 +6,7 @@ html, body{
 	margin: 0px;
 	font-family: helvetica, sans-serif;
 }
+
 .container{
 	display: flex;
 	width: 100%;
@@ -14,17 +15,14 @@ html, body{
 	min-height: 100%;
 	background: lightgrey;
 	box-sizing: border-box;
-
-
-
 }
 .container > * {
 	flex: 1 100%;
 }
 
-.main p{
+.prev-article {
 	text-align: justify;
-	padding: 2%;
+	padding: 10%;
 }
 .main {
 	position: relative;
@@ -33,9 +31,7 @@ html, body{
 .aside-1{
 	background: $color_back;
 	display: flex;
-	flex-direction: column;
-	/*align-items: center;*/
-	
+	flex-direction: column;	
 }
 
 
@@ -123,7 +119,6 @@ html, body{
 }
 
 
-
 .aside-2{
 	display: flex;
 	flex-direction: column;
@@ -147,4 +142,87 @@ html, body{
 	}
 
 }
+
+/*Ajustando a pagina de portfólio para que as divs sejam multilinhas*/
+.main-projects{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center; 
+}
+
+
+
+.main-projects > * {
+	font: .9em Verdana, Arial, Helvetica, sans-serif;
+	color: white;
+	width: 230px;
+	height: 230px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: darken(white, 12%);
+	margin: 2em .5em .5em .5em;
+	border-radius: 3%;
+}
+
+/*
+Estilo do form
+*/
+.reg-form{
+	display: flex;
+	justify-content: center;
+
+	fieldset{
+	display: flex;
+	max-width: 500px;
+	flex-direction: column;
+	align-items: center;	
+	margin: 0px;
+	border: 1px solid #ccc;
+	border-radius: 1em;
+		
+	}
+
+	legend{
+		color: #333;
+		padding: 0 10px;
+		margin: 0;
+		font-size: 1.5em;
+		font-weight: 400;
+	}
+
+
+	button {
+		width: 250px;
+		
+
+		margin: 10px 0 0 0;
+	}
+
+
+	input, textarea{
+		border: 1px solid #ccc; 
+		padding: 5px;
+		margin: 10px 0 0 0;
+		width: 250px;
+	}
+
+	input:focus,
+	textarea:focus{
+		background: #ffc;
+	}
+	textarea{
+		font: .9em Verdana, Arial, Helvetica, sans-serif;
+	}
+
+	label {
+		display: block;
+		margin:12px 0 0;
+		font-weight: 700;
+		font-size: .9em;
+}
+}
+
+
 
